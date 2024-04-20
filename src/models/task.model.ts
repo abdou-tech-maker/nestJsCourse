@@ -1,6 +1,9 @@
+import { Image } from "src/models/image.model";
+
 export interface Task {
   id: string;
   title: string;
+  images: Image[];
   description: string;
   status: TaskStatus;
 }
