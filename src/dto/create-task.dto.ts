@@ -1,7 +1,18 @@
-import { Image } from "src/models/image.model";
+import { Type } from 'class-transformer';
+import { IsArray, IsNotEmpty, IsString, ValidateNested } from 'class-validator';
+import { CreateImageDto } from "./create-image.dto";
 
 export class CreateTaskDto {
+  @IsString()
+  @IsNotEmpty()
   title: string;
+
+  @IsString()
+  @IsNotEmpty()
   description: string;
-  images: Image[];
+
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => CreateImageDto)
+  images: CreateImageDto[];
 }

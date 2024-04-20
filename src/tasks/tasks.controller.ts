@@ -14,6 +14,8 @@ export class TasksController {
   }
   @Post()
   createTask(@Body() createTaskDto: CreateTaskDto): Task {
+    console.log('Received createTaskDto:', createTaskDto);  // Log incoming DTO
+
     return this.tasksService.createTask(createTaskDto);
   }
 }
