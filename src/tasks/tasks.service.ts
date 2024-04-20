@@ -16,7 +16,6 @@ export class TasksService {
   }
   createTask(createTaskDto: CreateTaskDto): Task {
     const { title, description, images } = createTaskDto;
-   // Additional logging to verify the structure right before the operation that fails
    if (!createTaskDto.images) {
     this.logger.error('Images array is undefined');
   } else {
