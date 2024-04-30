@@ -1,4 +1,3 @@
 export class CreateImageDto {
-    url: string;
-
+  url: string;
 }
