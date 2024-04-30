@@ -1,4 +1,4 @@
-import { ImageModel } from "src/models/image.model";
+import { ImageModel } from 'src/models/image.model';
 
 export interface Task {
   id: string;
@@ -11,5 +11,6 @@ export interface Task {
 export enum TaskStatus {
   OPEN = 'OPEN',
   IN_PROGRESS = 'IN_PROGRESS',
+  BLOCKED = 'BLOCKED',
   DONE = 'DONE',
 }

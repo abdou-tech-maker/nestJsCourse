@@ -1,6 +1,4 @@
 export interface ImageModel {
-  id: string;  
-  url: string;  
+  id: string;
+  url: string;
 }
-  
-  
